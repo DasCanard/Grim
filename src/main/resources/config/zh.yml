@@ -23,7 +23,7 @@ client-brand:
   ignored-clients:
     - "^vanilla$"
     - "^fabric$"
-    - "^lunarclient:v\\d+\\.\\d+\\.\\d+-\\d{4}$"
+    - "^lunarclient:[a-z0-9]{7}"
     - "^Feather Fabric$"
 
 spectators:
@@ -79,7 +79,7 @@ RotationPlace:
 # Prediction-based NoSlow 检查
 # 在这里解释错误的服务器代码......即使在发送垃圾数据包时右键单击和副手按钮也很分辨
 # 比其他反作弊更稳定，但请报告任何错误......我在这里修复了大量的代码问题。
-NoSlowA:
+NoSlow:
   # 有多少偏移量是作弊
   # 标志 0.03-0.2 与 NoSlow 一致
   threshold: 0.001
@@ -117,9 +117,6 @@ TimerVehicle:
 EntityControl:
   setbackvl: 25
 
-GhostHand:
-  cancelVL: 1
-
 Reach:
   # 我们应该将碰撞箱扩大多少？ 0.0005 应该检测到 3.0005+ reach
   #
@@ -138,9 +135,6 @@ Reach:
   # 除非你是专注于 1.8 PvP 的服务器，否则不建议使用这个额外的数据包
   enable-post-packet: false
 
-exploit:
-  allow-sprint-jumping-when-using-elytra: true
-
 # 启用在加入时注入 netty 的日志插件以调试兼容性问题
 debug-pipeline-on-join: false
 
@@ -151,4 +145,4 @@ experimental-checks: false
 # 我们认为是应该的，因为有些数据包限制器并不计算被Grim取消的数据包。
 packet-spam-threshold: 100
 
-config-version: 8
+config-version: 9
